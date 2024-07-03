@@ -1,0 +1,17 @@
+name: test-expression
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run command
+        run: echo ${{ 1 == 1 }}
+      - name: Run command
+        run: echo ${{ 1 == 3 }}
+      - name: Run command
+        run: echo ${{'Hello world'}}
+
+    
