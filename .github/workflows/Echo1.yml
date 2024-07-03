@@ -22,4 +22,20 @@ jobs:
 
       - name: if 'fullstring' ends with 'string'
         run: echo "Ends with check:${{ endsWith('fullstring', 'string') }}"
-    
+        
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+       
+      - name: if 'fullstring' contains 'string'
+        if: ${{ contains('fullstring', 'string') }}
+        run: echo "Contains check:${{ contains('fullstring', 'string') }}"
+
+      - name: if 'fullstring' starts with 'fulstring'
+        if: ${{ startsWith('fullstring', 'string') }}
+        run: echo "Starts with check:${{ startsWith('fullstring', 'fulstring') }}"
+
+      - name: if 'fullstring' ends with 'string'
+        if: ${{ startsWith('fullstring', 'string') }}
+        run: echo "Ends with check:${{ endsWith('fullstring', 'string') }}"
+
