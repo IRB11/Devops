@@ -13,5 +13,13 @@ jobs:
         run: echo ${{ 1 == 3 }}
       - name: Run command
         run: echo ${{'Hello world'}}
+        
+      - name: if 'fullstring' contains 'string'
+        run: echo "Contains check:${{ contains('fullstring', 'string') }}"
 
+      - name: if 'fullstring' starts with 'fulstring'
+        run: echo "Starts with check:${{ startsWith('fullstring', 'fulstring') }}"
+
+      - name: if 'fullstring' ends with 'string'
+        run: echo "Ends with check:${{ endsWith('fullstring', 'string') }}"
     
