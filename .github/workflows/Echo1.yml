@@ -36,6 +36,6 @@ jobs:
         run: echo "Starts with check:${{ startsWith('fullstring', 'fulstring') }}"
 
       - name: if 'fullstring' ends with 'string'
-        if: ${{ startsWith('fullstring', 'string') }}
+        if: ${{ endsWith('fullstring', 'string') }}
         run: echo "Ends with check:${{ endsWith('fullstring', 'string') }}"
 
